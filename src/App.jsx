@@ -1,51 +1,17 @@
-import "./App.css";
-import { useReducer, useState } from "react";
-
-function reducer({ state }) {
-  // eslint-disable-next-line default-case
-  switch (state) {
-    case "pressed_once":
-      return {
-        state: "pressed_two",
-      };
-    case "pressed_two":
-      return {
-        state: "pressed_three",
-      };
-    case "pressed_three":
-      return {
-        state: "pressed_once",
-      };
-  }
-}
-
-const Button = (props) => {
-  const [state, dispatch] = useReducer(reducer, { state: "pressed_once" });
-  return (
-    <div
-      style={{
-        color: props.color,
-        textDecoration: props.underline ? "underline" : undefined,
-      }}
-      onClick={() => dispatch()}
-    >
-      Click Me {state.state}
-    </div>
-  );
-};
+import React from "react";
+import { Container, Row, Col } from "reactstrap";
+import Todo from "./components/todos";
 
 function App() {
-  const props = {
-    increment: 2,
-    underline: true,
-    color: "black",
-  };
   return (
-    <div className="App">
-      <Button color="red" />
-      <Button color="green" />
-      <Button color="blue" />
-    </div>
+    <Container className="my-3">
+      <Row>
+        <Col className="col-md-10 offset-md-1">
+          <h1 className="text-center">Bismillah.</h1>
+          <Todo />
+        </Col>
+      </Row>
+    </Container>
   );
 }
 
