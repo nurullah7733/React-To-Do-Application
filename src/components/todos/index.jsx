@@ -24,7 +24,7 @@ class Todo extends React.Component {
           "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
         time: new Date(),
         isSelect: false,
-        isComplete: false,
+        isComplete: true,
       },
       {
         id: "3",
