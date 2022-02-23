@@ -5,7 +5,6 @@ import { ButtonGroup, Button } from "reactstrap";
 const FilterController = ({ handleFilter, activeFilterColor }) => {
   return (
     <div>
-      {console.log(activeFilterColor)}
       <ButtonGroup>
         <Button
           color={activeFilterColor === "all" ? "dark" : "primary"}

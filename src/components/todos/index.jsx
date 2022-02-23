@@ -10,16 +10,27 @@ class Todo extends React.Component {
     todos: [
       {
         id: "1",
-        text: "md nurullah",
-        description: "lorem10 dk ffdkfj;lsdfosfsd s;fj;sdfosdf sdff",
+        text: "Meeting with PR deparment.",
+        description:
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
         time: new Date(),
         isSelect: false,
         isComplete: false,
       },
       {
         id: "2",
-        text: "md nurullah khan",
-        description: "lorem10 dk ffdkfj;lsdfosfsd s;fj;sdfosdf sdff",
+        text: "My Supper extra mention",
+        description:
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
+        time: new Date(),
+        isSelect: false,
+        isComplete: false,
+      },
+      {
+        id: "3",
+        text: "Friends workout list.",
+        description:
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
         time: new Date(),
         isSelect: false,
         isComplete: false,
@@ -125,7 +136,6 @@ class Todo extends React.Component {
   };
 
   render() {
-    console.log(this.state.view);
     return (
       <div>
         <Controller
@@ -143,7 +153,11 @@ class Todo extends React.Component {
         <div>{this.getView()}</div>
 
         <div>
-          <Modal isOpen={this.state.isOpenForm} toggle={this.toggleForm}>
+          <Modal
+            isOpen={this.state.isOpenForm}
+            toggle={this.toggleForm}
+            animation="false"
+          >
             <ModalHeader toggle={this.toggleForm}>
               Create a new Todo
             </ModalHeader>
